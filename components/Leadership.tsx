@@ -7,13 +7,14 @@ export default function Leadership() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const teamMembers = [
-    { name: 'Gavin Mestler', role: 'Partner & Head of Acquisitions & Modernization', image: '/images/V-Gavin Mestler.png', bio: '', imageStyle: { transform: 'scale(1.65) translateY(12%)' } },
+    { name: 'Gavin Mestler', role: 'Managing Partner and Co-Founder', image: '/images/V-Gavin Mestler.png', bio: '', imageStyle: { transform: 'scale(1.65) translateY(12%)' } },
+    { name: 'Logan Mestler', role: 'Managing Partner and Co-Founder', image: '/images/V-Logan Mestler.png', bio: '', imageStyle: { transform: 'scale(1.2) translateY(-2%)' } },
     { name: 'Brock Alpher', role: 'Partner & Head of Growth Strategy & Brand Positioning', image: '/images/V-Brock Alpher.png', bio: '', imageStyle: { transform: 'scale(1.35) translateY(15%)' } },
     { name: 'Jacob McKinney', role: 'Partner & Head of Leadership Transition & Talent Strategy', image: '/images/V-Jacob McKinney.png', bio: '', imageStyle: { transform: 'scale(1.1) translateY(5%)' } },
     { name: 'Daniel Berlin', role: 'Partner & Head of Strategic Development & Partnerships', image: '/images/V-Daniel Berlin.png', bio: '', imageStyle: { transform: 'scale(1.1)' } },
     { name: 'Alexander Sica', role: 'Partner & Head of Acquisition Sales & Owner Outreach', image: '/images/V-Alexander Sica.png', bio: '', imageStyle: { transform: 'scale(1.18) translateY(8%)' } },
-    { name: 'Logan Mestler', role: 'Partner & Head of Business Expansion & Development', image: '/images/V-Logan Mestler.png', bio: '', imageStyle: { transform: 'scale(1.2) translateY(-2%)' } },
     { name: 'Vega Guo', role: 'Partner & Head of Technology-Enabled Operations', image: '/images/V-Vega Guo.png', bio: '', imageStyle: { transform: 'scale(1.25) translateY(5%)' } },
+    { name: 'Shah Durran', role: 'Head of AI Systems', image: '/images/V-Shah Durran.png', bio: '', imageStyle: { transform: 'scale(1.15) translateY(8%) translateX(4%)', objectPosition: '70% 0%' } },
   ]
 
   const handleToggle = (index: number) => {

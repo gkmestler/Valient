@@ -61,6 +61,16 @@ export default function Advisors() {
               </div>
             ))}
           </div>
+          <div className="etower-section">
+            <Image
+              src="/images/etower-hero-logo.png"
+              alt="Babson eTower"
+              width={200}
+              height={80}
+              className="etower-logo"
+            />
+            <p className="etower-text">Valient is also backed by Babson eTower, Babson's elite entrepreneurship community, with alumni that have built companies valued at over $3 billion.</p>
+          </div>
         </div>
       </div>
     </section>

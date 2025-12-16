@@ -1,5 +1,3 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import Image from 'next/image'
 
 const portfolioCompanies = [
@@ -46,12 +44,6 @@ const portfolioCompanies = [
     url: 'https://takkra.es/',
   },
   {
-    name: 'Vintra',
-    logo: '/images/portfolio/Vintralogo.png',
-    className: '',
-    url: 'https://www.linkedin.com/company/vintra-franchise-holdings/posts/?feedView=all',
-  },
-  {
     name: 'Truvit',
     logo: '/images/portfolio/truvit_logo.png',
     className: 'logo-truvit',
@@ -62,13 +54,12 @@ const portfolioCompanies = [
 export default function Portfolio() {
   return (
     <div className="portfolio-page">
-      <Header />
       <main className="portfolio-main">
         <div className="container">
           <div className="portfolio-header">
             <h1>Our Operating Experience</h1>
             <p className="portfolio-subtext">
-              Before launching Valient, our team built and scaled six companies to over $3 million in annual revenue. Because these businesses were founded and operated by us, not acquired, we understand the long hours, the personal sacrifices, and the deep sense of pride that comes from building a meaningful business over many years. That's why we approach every potential acquisition with respect and transparency.
+              Before launching Valient, our team built and scaled six companies to over $3 million in annual revenue and more than eight figures in cumulative value. Because these businesses were founded and operated by us, not acquired, we understand the long hours, the personal sacrifices, and the deep sense of pride that comes from building a meaningful business over many years. That's why we approach every potential acquisition with respect and transparency.
             </p>
           </div>
           <div className="portfolio-grid">
@@ -92,7 +83,6 @@ export default function Portfolio() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }

@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 
 export default function QualifyPage() {
   const [formData, setFormData] = useState({
@@ -20,8 +18,6 @@ export default function QualifyPage() {
     additionalInfo: ''
   })
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -35,48 +31,6 @@ export default function QualifyPage() {
 
   return (
     <div className="qualify-page">
-      <header className="header header-dark">
-        <div className="container">
-          <div className="header-content">
-            <Link href="/" className="logo">
-              <Image
-                src="/images/Valientwhite1.png"
-                alt="Valient"
-                width={140}
-                height={35}
-                priority
-              />
-            </Link>
-
-            <nav>
-              <ul className="nav-links">
-                <li><Link href="/#team">Team</Link></li>
-                <li><Link href="/#portfolio">Portfolio</Link></li>
-                <li><Link href="/#approach">Our Approach</Link></li>
-                <li><Link href="/qualify">Sell</Link></li>
-              </ul>
-            </nav>
-
-            <button
-              className="mobile-menu-btn"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle mobile menu"
-            >
-              <span className="menu-icon"></span>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <nav className={`mobile-nav mobile-nav-dark ${isMobileMenuOpen ? 'open' : ''}`}>
-        <ul className="mobile-nav-links">
-          <li><Link href="/#team" onClick={() => setIsMobileMenuOpen(false)}>Team</Link></li>
-          <li><Link href="/#portfolio" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</Link></li>
-          <li><Link href="/#approach" onClick={() => setIsMobileMenuOpen(false)}>Our Approach</Link></li>
-          <li><Link href="/qualify" onClick={() => setIsMobileMenuOpen(false)}>Sell</Link></li>
-        </ul>
-      </nav>
-
       <main className="qualify-main">
         <div className="container">
           <div className="qualify-header-text">
