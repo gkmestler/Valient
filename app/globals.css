@@ -1224,7 +1224,7 @@ a.portfolio-card {
 .criteria-card {
   position: relative;
   z-index: 1;
-  background: radial-gradient(ellipse 150% 180% at 0% 100%, #62B2FF 0%, #7FC0FF 20%, #C3E2FF 40%, rgba(230, 243, 255, 0.85) 60%, rgba(255, 255, 255, 0.9) 80%);
+  background: #000000;
   border-radius: 20px;
   padding: 60px 40px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
@@ -1294,7 +1294,7 @@ a.portfolio-card {
   align-items: flex-start;
   gap: 20px;
   padding: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 992px) {
@@ -1311,7 +1311,11 @@ a.portfolio-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000000;
+  color: #FFFFFF;
+}
+
+.criteria-icon img {
+  filter: invert(1);
 }
 
 .criteria-icon svg {
@@ -1322,7 +1326,7 @@ a.portfolio-card {
 .criteria-text h3 {
   font-size: 24px;
   font-weight: normal;
-  color: #000000;
+  color: #FFFFFF;
   margin-bottom: 5px;
 }
 
@@ -1334,7 +1338,7 @@ a.portfolio-card {
 
 .criteria-text p {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Region Section */
