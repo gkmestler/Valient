@@ -204,16 +204,17 @@ h1, h2, h3 {
 }
 
 .mobile-nav-dark {
-  background: #000000;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000000 !important;
+  border-top: none;
+  box-shadow: none;
 }
 
 .mobile-nav-dark .mobile-nav-links a {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 .mobile-nav-dark .mobile-nav-links a::after {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF !important;
 }
 
 .mobile-menu-btn {
@@ -267,7 +268,7 @@ h1, h2, h3 {
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 70px;
+  top: 65px;
   left: 0;
   right: 0;
   background: white;
@@ -1634,8 +1635,19 @@ a.portfolio-card {
     padding: 6px 10px 4px 10px;
   }
 
+  .team-info-text {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .team-name-row {
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
   .team-name {
     font-size: 12px;
+    text-align: left;
   }
 
   .team-role {
@@ -1666,10 +1678,6 @@ a.portfolio-card {
     height: 8px;
   }
 
-  .team-name-row {
-    gap: 5px;
-  }
-
   /* Portfolio grid - 2 per row */
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1678,5 +1686,28 @@ a.portfolio-card {
 
   .portfolio-card {
     padding: 15px;
+  }
+
+  /* Form - 2 fields per row on mobile */
+  .form-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .form-field {
+    flex: 1 1 calc(50% - 6px);
+    min-width: calc(50% - 6px);
+  }
+
+  .form-field label {
+    font-size: 12px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .select-wrapper select {
+    height: 42px;
+    font-size: 13px;
   }
 }
