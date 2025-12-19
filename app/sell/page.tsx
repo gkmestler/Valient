@@ -13,8 +13,6 @@ export default function QualifyPage() {
     yearsInBusiness: '',
     annualRevenue: '',
     employees: '',
-    reasonForSelling: '',
-    timeline: '',
     additionalInfo: ''
   })
 
@@ -23,10 +21,41 @@ export default function QualifyPage() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your submission. We will be in touch shortly.')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        alert('Thank you for your submission. We will be in touch shortly.')
+        setFormData({
+          businessName: '',
+          ownerName: '',
+          email: '',
+          phone: '',
+          businessType: '',
+          location: '',
+          yearsInBusiness: '',
+          annualRevenue: '',
+          employees: '',
+          additionalInfo: ''
+        })
+      } else {
+        alert('Something went wrong. Please try again or email us directly.')
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again or email us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -53,6 +82,7 @@ export default function QualifyPage() {
                     value={formData.businessName}
                     onChange={handleChange}
                     placeholder="Your business name"
+                    required
                   />
                 </div>
                 <div className="form-field">
@@ -64,6 +94,7 @@ export default function QualifyPage() {
                     value={formData.ownerName}
                     onChange={handleChange}
                     placeholder="Your full name"
+                    required
                   />
                 </div>
               </div>
@@ -78,6 +109,7 @@ export default function QualifyPage() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
                 <div className="form-field">
@@ -89,6 +121,7 @@ export default function QualifyPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="(555) 555-5555"
+                    required
                   />
                 </div>
               </div>
@@ -103,6 +136,7 @@ export default function QualifyPage() {
                     value={formData.businessType}
                     onChange={handleChange}
                     placeholder="e.g., HVAC, Plumbing, Landscaping"
+                    required
                   />
                 </div>
                 <div className="form-field">
@@ -114,6 +148,7 @@ export default function QualifyPage() {
                     value={formData.location}
                     onChange={handleChange}
                     placeholder="City, State"
+                    required
                   />
                 </div>
               </div>
@@ -127,6 +162,7 @@ export default function QualifyPage() {
                       name="yearsInBusiness"
                       value={formData.yearsInBusiness}
                       onChange={handleChange}
+                      required
                     >
                       <option value="">Select...</option>
                       <option value="0-5">0-5 years</option>
@@ -144,9 +180,12 @@ export default function QualifyPage() {
                       name="annualRevenue"
                       value={formData.annualRevenue}
                       onChange={handleChange}
+                      required
                     >
                       <option value="">Select...</option>
-                      <option value="under-500k">Under $500K</option>
+                      <option value="under-100k">Under $100K</option>
+                      <option value="100k-250k">$100K - $250K</option>
+                      <option value="250k-500k">$250K - $500K</option>
                       <option value="500k-1m">$500K - $1M</option>
                       <option value="1m-3m">$1M - $3M</option>
                       <option value="3m-5m">$3M - $5M</option>
@@ -166,9 +205,12 @@ export default function QualifyPage() {
                       name="employees"
                       value={formData.employees}
                       onChange={handleChange}
+                      required
                     >
                       <option value="">Select...</option>
-                      <option value="1-5">1-5</option>
+                      <option value="1">1 (Just me)</option>
+                      <option value="2-3">2-3</option>
+                      <option value="4-5">4-5</option>
                       <option value="5-10">5-10</option>
                       <option value="10-25">10-25</option>
                       <option value="25-50">25-50</option>
@@ -176,36 +218,6 @@ export default function QualifyPage() {
                     </select>
                   </div>
                 </div>
-                <div className="form-field">
-                  <label htmlFor="timeline">Selling Timeline</label>
-                  <div className="select-wrapper">
-                    <select
-                      id="timeline"
-                      name="timeline"
-                      value={formData.timeline}
-                      onChange={handleChange}
-                    >
-                      <option value="">Select...</option>
-                      <option value="asap">As soon as possible</option>
-                      <option value="6-months">Within 6 months</option>
-                      <option value="1-year">Within 1 year</option>
-                      <option value="1-2-years">1-2 years</option>
-                      <option value="exploring">Just exploring options</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="form-field form-field-full">
-                <label htmlFor="reasonForSelling">Why are you considering selling?</label>
-                <textarea
-                  id="reasonForSelling"
-                  name="reasonForSelling"
-                  value={formData.reasonForSelling}
-                  onChange={handleChange}
-                  placeholder="Optional - Share as much or as little as you'd like"
-                  rows={3}
-                />
               </div>
 
               <div className="form-field form-field-full">
@@ -221,8 +233,8 @@ export default function QualifyPage() {
               </div>
 
               <div className="form-submit">
-                <button type="submit" className="submit-btn">
-                  Connect with Us
+                <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Connect with Us'}
                 </button>
               </div>
             </form>

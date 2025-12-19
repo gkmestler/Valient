@@ -7,14 +7,15 @@ export default function Leadership() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const teamMembers = [
-    { name: 'Gavin Mestler', role: 'Managing Partner and Co-Founder', image: '/images/V-Gavin Mestler.png', bio: '', imageStyle: { transform: 'scale(1.65) translateY(12%)' } },
-    { name: 'Logan Mestler', role: 'Managing Partner and Co-Founder', image: '/images/V-Logan Mestler.png', bio: '', imageStyle: { transform: 'scale(1.2) translateY(-2%)' } },
-    { name: 'Brock Alpher', role: 'Partner & Head of Growth Strategy & Brand Positioning', image: '/images/V-Brock Alpher.png', bio: '', imageStyle: { transform: 'scale(1.35) translateY(15%)' } },
-    { name: 'Jacob McKinney', role: 'Partner & Head of Leadership Transition & Talent Strategy', image: '/images/V-Jacob McKinney.png', bio: '', imageStyle: { transform: 'scale(1.1) translateY(5%)' } },
-    { name: 'Daniel Berlin', role: 'Partner & Head of Strategic Development & Partnerships', image: '/images/V-Daniel Berlin.png', bio: '', imageStyle: { transform: 'scale(1.1)' } },
-    { name: 'Alexander Sica', role: 'Partner & Head of Acquisition Sales & Owner Outreach', image: '/images/V-Alexander Sica.png', bio: '', imageStyle: { transform: 'scale(1.18) translateY(8%)' } },
-    { name: 'Vega Guo', role: 'Partner & Head of Technology-Enabled Operations', image: '/images/V-Vega Guo.png', bio: '', imageStyle: { transform: 'scale(1.25) translateY(5%)' } },
-    { name: 'Shah Durran', role: 'Head of AI Systems', image: '/images/V-Shah Durran.png', bio: '', imageStyle: { transform: 'scale(1.15) translateY(8%) translateX(4%)', objectPosition: '70% 0%' } },
+    { name: 'Gavin Mestler', role: 'Managing Partner and Co-Founder', image: '/images/V-Gavin Mestler.png', bio: 'Gavin co-founded Valient Partners alongside his brother Logan with a mission to preserve and modernize the businesses that America runs on.', imageStyle: { transform: 'scale(1.65) translateY(12%)' }, linkedin: 'https://www.linkedin.com/in/gavinmestler/' },
+    { name: 'Logan Mestler', role: 'Managing Partner and Co-Founder', image: '/images/V-Logan Mestler.png', bio: 'Logan co-founded Valient Partners alongside his brother Gavin with a mission to preserve and modernize the businesses that America runs on.', imageStyle: { transform: 'scale(1.2) translateY(-2%)' }, linkedin: 'https://www.linkedin.com/in/logan-mestler-753917253/' },
+    { name: 'Daniel Berlin', role: 'Partner & Head of Strategic Development & Partnerships', image: '/images/V-Daniel Berlin.png', bio: 'The founder and operator of a consumer brand carried in 55+ grocery stores across the U.S., with experience managing product, partnerships, and day-to-day operations.', imageStyle: { transform: 'scale(1.1)' }, linkedin: 'https://www.linkedin.com/in/dirtydan/' },
+    { name: 'Jacob McKinney', role: 'Partner & Head of Leadership Transition & Talent Strategy', image: '/images/V-Jacob McKinney.png', bio: 'Jacob is the co-founder of a junk removal business in Massachusetts with millions in revenue and 20+ employees.', imageStyle: { transform: 'scale(1.1) translateY(5%)' }, linkedin: 'https://www.linkedin.com/in/jacobmkny/' },
+    { name: 'Brock Alpher', role: 'Partner & Head of Growth Strategy & Brand Positioning', image: '/images/V-Brock Alpher.png', bio: 'Has led growth for two $500K+/yr consumer brands. He focuses on scaling businesses through creative marketing and modernized operating systems.', imageStyle: { transform: 'scale(1.35) translateY(15%)' }, linkedin: 'https://www.linkedin.com/in/brock-alpher-0432b81b7/' },
+    { name: 'Dean Farber', role: 'Managing Partner', image: '/images/V-Dean Farber.png', bio: '', imageStyle: { transform: 'scale(1.0) translateY(3%)' }, linkedin: '' },
+    { name: 'Alexander Sica', role: 'Partner & Head of Acquisition Sales & Owner Outreach', image: '/images/V-Alexander Sica.png', bio: 'A sales-driven operator with experience launching and scaling consumer and wellness businesses.', imageStyle: { transform: 'scale(1.18) translateY(8%)' }, linkedin: 'https://www.linkedin.com/in/alexander-sica-97b9a3200/' },
+    { name: 'Vega Guo', role: 'Partner & Head of Technology-Enabled Operations', image: '/images/V-Vega Guo.png', bio: 'An entrepreneur with experience selling high-ticket education technology solutions to schools, with a focus on partnerships and enterprise sales.', imageStyle: { transform: 'scale(1.25) translateY(5%)' }, linkedin: 'https://www.linkedin.com/in/vega-guo-877630287/' },
+    { name: 'Shah Durran', role: 'Head of AI Systems', image: '/images/V-Shah Durran.png', bio: 'A full-stack developer specializing in building and deploying AI-driven systems for businesses.', imageStyle: { transform: 'scale(1.15) translateY(8%) translateX(4%)', objectPosition: '70% 0%' }, linkedin: 'https://www.linkedin.com/in/shah-durran-ahmed-a38b471a5/' },
   ]
 
   const handleToggle = (index: number) => {
@@ -29,7 +30,7 @@ export default function Leadership() {
           <p className="leadership-subtext">We are the top entrepreneurs at the #1 school for entrepreneurship in the world and we've already built successful companies. Now, we are supported by industry experts to acquire established businesses ready for modernization.</p>
           <div className="team-grid">
             {teamMembers.map((member, index) => (
-              <div key={index} className="team-card" onClick={() => handleToggle(index)}>
+              <div key={index} className={`team-card ${expandedIndex === index ? 'expanded' : ''}`} onClick={() => handleToggle(index)}>
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -42,7 +43,24 @@ export default function Leadership() {
                   <div className={`team-info ${expandedIndex === index ? 'expanded' : ''}`}>
                     <div className="team-info-text">
                       <div className="team-name-row">
-                        <div className="team-name">{member.name}</div>
+                        <span className="team-name">{member.name}</span>
+                        {member.linkedin && (
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="linkedin-link"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Image
+                              src="/images/linkedin-icon-44.png"
+                              alt="LinkedIn"
+                              width={18}
+                              height={18}
+                              className="linkedin-icon"
+                            />
+                          </a>
+                        )}
                       </div>
                       <div className="team-role">{member.role}</div>
                       <div className="team-expanded-content">

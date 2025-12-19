@@ -4,8 +4,8 @@ export default function Statistics() {
   const stats = [
     { value: '2022', label: 'Founded' },
     { value: '$3M+', label: 'In Revenue' },
-    { value: '7', label: 'Young Founders' },
-    { value: '20', label: 'Industry Expert Advisors' },
+    { value: '8', label: 'Founders' },
+    { value: '6', label: 'Strategic Advisors' },
   ]
 
   return (

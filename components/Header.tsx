@@ -13,8 +13,8 @@ export default function Header() {
   const pathname = usePathname()
   const prevPathnameRef = useRef<string | null>(null)
 
-  // Determine if header should be dark (for sell page)
-  const isDarkHeader = pathname === '/sell'
+  // Determine if header should be dark (for sell and approach pages)
+  const isDarkHeader = pathname === '/sell' || pathname === '/approach'
 
   useEffect(() => {
     const handleScroll = () => {

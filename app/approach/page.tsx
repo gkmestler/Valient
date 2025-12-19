@@ -25,7 +25,7 @@ export default function ApproachPage() {
             <div className="criteria-header">
               <h2>Acquisition Criteria</h2>
               <p className="criteria-intro">
-                We focus on acquiring mature businesses with proven track records
+                We focus on acquiring essential service businesses in New England
                 that meet the following criteria:
               </p>
             </div>
@@ -44,7 +44,7 @@ export default function ApproachPage() {
                       />
                     </div>
                     <div className="criteria-text">
-                      <h3>$500K - $3M</h3>
+                      <h3>$300K - $2M</h3>
                       <p>in EBITDA</p>
                     </div>
                   </div>
@@ -59,7 +59,7 @@ export default function ApproachPage() {
                       />
                     </div>
                     <div className="criteria-text">
-                      <h3>10+ years</h3>
+                      <h3>5+ years</h3>
                       <p>in operation</p>
                     </div>
                   </div>
@@ -74,8 +74,8 @@ export default function ApproachPage() {
                       />
                     </div>
                     <div className="criteria-text">
-                      <h3>Stable or growing</h3>
-                      <p>revenue trends</p>
+                      <h3>0-10%</h3>
+                      <p>annual growth</p>
                     </div>
                   </div>
 

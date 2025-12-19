@@ -6,27 +6,38 @@ export default function Advisors() {
     {
       name: 'Brad Johnson',
       title: 'Former VP of Operations at Wayfair',
-      image: '/images/brad-johnson.jpg'
+      image: '/images/brad-johnson.jpg',
+      linkedin: 'https://www.linkedin.com/in/bradjohnson12/',
     },
     {
       name: 'Vincent Sica',
       title: 'Founder of Vintra Franchise Holdings',
-      image: '/images/vincent-sica.jpg'
+      image: '/images/vincent-sica.jpg',
+      linkedin: '',
     },
     {
       name: 'Scott Waxler',
       title: 'Founder, Lockebridge Capital Partners',
-      image: '/images/scott-waxler.jpg'
+      image: '/images/scott-waxler.jpg',
+      linkedin: 'https://www.linkedin.com/in/scottwaxler/',
     },
     {
       name: 'Erik Noyes',
       title: 'Professor of Entrepreneurship at Babson College',
-      image: '/images/erik-noyes.jpg'
+      image: '/images/erik-noyes.jpg',
+      linkedin: 'https://www.linkedin.com/in/erik-noyes-40b1b73/',
     },
     {
       name: 'Chad Mestler',
       title: 'Founder of Helvetica Group and Raiseli.com',
-      image: '/images/chad-mestler.jpg'
+      image: '/images/chad-mestler.jpg',
+      linkedin: 'https://www.linkedin.com/in/chadmestler/',
+    },
+    {
+      name: 'Edward Gorelick',
+      title: 'Founder of Gorelick & Uslaner, CPAs',
+      image: '/images/edward-gorelick.jpg',
+      linkedin: '',
     },
   ]
 
@@ -55,7 +66,25 @@ export default function Advisors() {
                   />
                 )}
                 <div className="advisor-info">
-                  <div className="advisor-name">{advisor.name}</div>
+                  <div className="advisor-name-row">
+                    <div className="advisor-name">{advisor.name}</div>
+                    {advisor.linkedin && (
+                      <a
+                        href={advisor.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="linkedin-link"
+                      >
+                        <Image
+                          src="/images/linkedin-icon-44.png"
+                          alt="LinkedIn"
+                          width={18}
+                          height={18}
+                          className="linkedin-icon"
+                        />
+                      </a>
+                    )}
+                  </div>
                   <div className="advisor-title">{advisor.title}</div>
                 </div>
               </div>
