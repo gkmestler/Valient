@@ -6,7 +6,7 @@ export default function AboutPE() {
       <div className="container">
         <div className="about-pe-content">
           <h2>
-            Valient Is <em>Not</em> a
+            Methodic Is <em>Not</em> Your Typical
             <span className="line2">Private Equity Firm</span>
           </h2>
           <p>

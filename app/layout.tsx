@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Valient - We Buy and Grow Blue-Collar Businesses',
+  title: 'Methodic - We Buy and Grow Blue-Collar Businesses',
   description: 'Sell your business to the next generation of ambitious entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
 }
 

@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="footer-content">
           <Link href="/" className="footer-logo">
             <Image
-              src="/images/Valientwhite1.png"
-              alt="Valient"
-              width={140}
-              height={35}
+              src="/images/METHODIC LOGO WHITE.png"
+              alt="Methodic"
+              width={170}
+              height={42}
             />
           </Link>
           <nav className="footer-nav">
@@ -24,7 +24,7 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
-        <p className="footer-copyright">© {new Date().getFullYear()} Valient Partners. All rights reserved.</p>
+        <p className="footer-copyright">© {new Date().getFullYear()} Methodic Partners. All rights reserved.</p>
       </div>
     </footer>
   )

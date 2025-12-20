@@ -63,7 +63,7 @@ h1, h2, h3 {
   z-index: 1000;
   background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  padding: 15px 0;
+  padding: 15px 0 15px 0;
 }
 
 .header.scrolled {
@@ -72,7 +72,7 @@ h1, h2, h3 {
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   /* Keep the same padding - no size change */
-  padding: 15px 0;
+  padding: 15px 0 15px 0;
 }
 
 .header-content {
@@ -86,13 +86,13 @@ h1, h2, h3 {
   text-decoration: none;
   line-height: 0;
   position: relative;
-  height: 35px;
-  width: 140px;
+  height: 37px;
+  width: 150px;
 }
 
 .logo img {
-  height: 35px;
-  width: 140px;
+  height: 37px;
+  width: 150px;
   object-fit: contain;
   object-position: left center;
   position: absolute;
@@ -713,6 +713,7 @@ h1, h2, h3 {
   opacity: 0.8;
   font-family: 'Montserrat', sans-serif;
   text-align: left;
+  min-height: 36px;
 }
 
 .team-expanded-content {
@@ -882,7 +883,7 @@ h1, h2, h3 {
 }
 
 .footer-logo img {
-  height: 35px;
+  height: 42px;
   width: auto;
 }
 
@@ -1652,6 +1653,7 @@ a.portfolio-card {
 
   .team-role {
     font-size: 9px;
+    min-height: 27px;
   }
 
   .team-expanded-content {

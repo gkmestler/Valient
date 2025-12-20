@@ -115,27 +115,27 @@ export default function Header() {
             <Link href="/" className="logo">
               {isDarkHeader ? (
                 <Image
-                  src="/images/Valientwhite1.png"
-                  alt="Valient"
-                  width={140}
-                  height={35}
+                  src="/images/METHODIC LOGO WHITE.png"
+                  alt="Methodic"
+                  width={150}
+                  height={37}
                   priority
                 />
               ) : (
                 <>
                   <Image
-                    src="/images/Valientblack1.png"
-                    alt="Valient"
-                    width={140}
-                    height={35}
+                    src="/images/METHODIC LOGO BLACK.png"
+                    alt="Methodic"
+                    width={170}
+                    height={42}
                     priority
                     className="logo-black"
                   />
                   <Image
-                    src="/images/Valientwhite1.png"
-                    alt="Valient"
-                    width={140}
-                    height={35}
+                    src="/images/METHODIC LOGO WHITE.png"
+                    alt="Methodic"
+                    width={170}
+                    height={42}
                     priority
                     className="logo-white"
                   />
