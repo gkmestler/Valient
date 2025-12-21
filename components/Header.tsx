@@ -113,7 +113,7 @@ export default function Header() {
         <div className="container">
           <div className="header-content">
             <Link href="/" className="logo">
-              {isDarkHeader ? (
+              {(isDarkHeader || isScrolled) ? (
                 <Image
                   src="/images/METHODIC LOGO WHITE.png"
                   alt="Methodic"
@@ -122,24 +122,13 @@ export default function Header() {
                   priority
                 />
               ) : (
-                <>
-                  <Image
-                    src="/images/METHODIC LOGO BLACK.png"
-                    alt="Methodic"
-                    width={170}
-                    height={42}
-                    priority
-                    className="logo-black"
-                  />
-                  <Image
-                    src="/images/METHODIC LOGO WHITE.png"
-                    alt="Methodic"
-                    width={170}
-                    height={42}
-                    priority
-                    className="logo-white"
-                  />
-                </>
+                <Image
+                  src="/images/METHODIC LOGO BLACK.png"
+                  alt="Methodic"
+                  width={150}
+                  height={37}
+                  priority
+                />
               )}
             </Link>
 

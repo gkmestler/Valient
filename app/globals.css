@@ -63,16 +63,16 @@ h1, h2, h3 {
   z-index: 1000;
   background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  padding: 15px 0 15px 0;
+  padding: 12px 0 12px 0;
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 1) !important;
-  background: rgba(255, 255, 255, 1) !important;
+  background-color: #000000 !important;
+  background: #000000 !important;
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   /* Keep the same padding - no size change */
-  padding: 15px 0 15px 0;
+  padding: 12px 0 12px 0;
 }
 
 .header-content {
@@ -163,11 +163,11 @@ h1, h2, h3 {
 }
 
 .header.scrolled .nav-links a {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .header.scrolled .nav-links a::after {
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 
 /* Dark header variant for qualify page */
@@ -253,7 +253,7 @@ h1, h2, h3 {
 .header.scrolled .menu-icon,
 .header.scrolled .menu-icon::before,
 .header.scrolled .menu-icon::after {
-  background: #000000;
+  background: #FFFFFF;
 }
 
 .menu-icon::before {

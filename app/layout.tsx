@@ -11,8 +11,21 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Methodic - We Buy and Grow Blue-Collar Businesses',
-  description: 'Sell your business to the next generation of ambitious entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
+  title: 'Methodic Partners',
+  description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
+  icons: {
+    icon: '/icon.svg',
+  },
+  openGraph: {
+    title: 'Methodic Partners',
+    description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Methodic Partners',
+    description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
+  },
 }
 
 export default function RootLayout({
