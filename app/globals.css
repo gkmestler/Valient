@@ -1690,16 +1690,15 @@ a.portfolio-card {
     padding: 15px;
   }
 
-  /* Form - 2 fields per row on mobile */
+  /* Form - 1 field per row on mobile */
   .form-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 12px;
   }
 
   .form-field {
-    flex: 1 1 calc(50% - 6px);
-    min-width: calc(50% - 6px);
+    flex: 1 1 100%;
+    min-width: 100%;
   }
 
   .form-field label {
