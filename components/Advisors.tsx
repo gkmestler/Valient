@@ -4,12 +4,6 @@ import Image from 'next/image'
 export default function Advisors() {
   const advisors = [
     {
-      name: 'Brad Johnson',
-      title: 'Former VP of Operations at Wayfair',
-      image: '/images/brad-johnson.jpg',
-      linkedin: 'https://www.linkedin.com/in/bradjohnson12/',
-    },
-    {
       name: 'Vincent Sica',
       title: 'Founder of Vintra Franchise Holdings',
       image: '/images/vincent-sica.jpg',
