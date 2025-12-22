@@ -24,7 +24,7 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
-        <p className="footer-copyright">© {new Date().getFullYear()} Methodic Partners. All rights reserved.</p>
+        <p className="footer-copyright">© {new Date().getFullYear()} Methodic Ventures. All rights reserved.</p>
       </div>
     </footer>
   )

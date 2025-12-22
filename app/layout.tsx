@@ -11,19 +11,19 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Methodic Partners',
+  title: 'Methodic Ventures',
   description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
   icons: {
     icon: '/icon.svg',
   },
   openGraph: {
-    title: 'Methodic Partners',
+    title: 'Methodic Ventures',
     description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Methodic Partners',
+    title: 'Methodic Ventures',
     description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
   },
 }
