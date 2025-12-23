@@ -27,7 +27,7 @@ export default function Leadership() {
       <div className="container">
         <div className="leadership-content">
           <h2>Meet Our Team</h2>
-          <p className="leadership-subtext">We are the top entrepreneurs at the #1 school for entrepreneurship in the world and we've already built successful companies. Now, we are supported by industry experts to acquire established businesses ready for modernization.</p>
+          <p className="leadership-subtext">We've assembled a diverse team of entrepreneurs, blending talents from various backgrounds and industries, to effectively support our portfolio companies from all angles.</p>
           <div className="team-grid">
             {teamMembers.map((member, index) => (
               <div key={index} className={`team-card ${expandedIndex === index ? 'expanded' : ''}`} onClick={() => handleToggle(index)}>
