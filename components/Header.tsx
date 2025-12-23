@@ -23,16 +23,24 @@ export default function Header() {
       setIsScrolled(shouldBeScrolled)
     }
 
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
     // Check scroll position on mount
     handleScroll()
 
     // Add listeners to both window and document
     window.addEventListener('scroll', handleScroll, { passive: true })
     document.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 
@@ -109,11 +117,11 @@ export default function Header() {
 
   return (
     <>
-      <header className={`header ${isScrolled ? 'scrolled' : ''} ${isDarkHeader ? 'header-dark' : ''}`}>
+      <header className={`header ${isScrolled ? 'scrolled' : ''} ${isDarkHeader ? 'header-dark' : ''} ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         <div className="container">
           <div className="header-content">
             <Link href="/" className="logo">
-              {(isDarkHeader || isScrolled) ? (
+              {(isDarkHeader || isScrolled || isMobileMenuOpen) ? (
                 <Image
                   src="/images/METHODIC LOGO WHITE.png"
                   alt="Methodic"

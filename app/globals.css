@@ -217,6 +217,31 @@ h1, h2, h3 {
   background-color: #FFFFFF !important;
 }
 
+/* Mobile menu open state - header turns black */
+.header.mobile-menu-open {
+  background: #000000 !important;
+  background-color: #000000 !important;
+}
+
+.header.mobile-menu-open .menu-icon,
+.header.mobile-menu-open .menu-icon::before,
+.header.mobile-menu-open .menu-icon::after {
+  background: #FFFFFF;
+}
+
+/* Mobile nav gets black background when open */
+.mobile-nav.open {
+  background: #000000 !important;
+}
+
+.mobile-nav.open .mobile-nav-links a {
+  color: #FFFFFF !important;
+}
+
+.mobile-nav.open .mobile-nav-links a::after {
+  background-color: #FFFFFF !important;
+}
+
 .mobile-menu-btn {
   display: block;
   background: none;
@@ -268,12 +293,12 @@ h1, h2, h3 {
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 65px;
+  top: 61px;
   left: 0;
   right: 0;
-  background: white;
+  background: #000000;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   z-index: 999;
 }
 
