@@ -1300,6 +1300,11 @@ a.portfolio-card {
   max-height: 55%;
 }
 
+.portfolio-card.logo-fluidify .portfolio-logo {
+  max-width: 105%;
+  max-height: 105%;
+}
+
 /* Approach Page Styles */
 .approach-page {
   min-height: 100vh;

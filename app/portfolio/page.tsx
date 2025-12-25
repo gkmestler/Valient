@@ -49,6 +49,12 @@ const portfolioCompanies = [
     className: 'logo-truvit',
     url: 'https://www.linkedin.com/company/truvit/',
   },
+  {
+    name: 'Fluidify Systems',
+    logo: '/images/portfolio/Fluidify Systems.png',
+    className: 'logo-fluidify',
+    url: 'https://fluidifysystems.com',
+  },
 ]
 
 export default function Portfolio() {
@@ -59,7 +65,7 @@ export default function Portfolio() {
           <div className="portfolio-header">
             <h1>Our Operating Experience</h1>
             <p className="portfolio-subtext">
-              Before launching Methodic, our team built and operated multiple ventures, generating $4M+ in cumulative revenue. Because these businesses were founded and operated by us, not acquired, we understand the long hours, the personal sacrifices, and the deep sense of pride that comes from building a meaningful business over many years. That's why we approach every potential acquisition with respect and transparency.
+              Before launching Methodic, our team built and operated multiple ventures, generating $4M+ in cumulative annual revenue. These businesses were founded and operated by us, not acquired, so we understand the long hours, the personal sacrifices, and the deep sense of pride that comes from building a meaningful business over many years. That's why we approach every potential acquisition with respect and transparency.
             </p>
           </div>
           <div className="portfolio-grid">
