@@ -844,6 +844,21 @@ h1, h2, h3 {
   background: #333;
 }
 
+.advisor-image-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #333;
+  flex-shrink: 0;
+}
+
+.advisor-image-inner {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
 .advisor-info {
   flex: 1;
 }

@@ -8,6 +8,8 @@ export default function Advisors() {
       title: 'Former VP of Operations at Wayfair',
       image: '/images/brad-johnson.jpg',
       linkedin: 'https://www.linkedin.com/in/bradjohnson12/',
+      imageScale: 1.5,
+      imageOffsetY: 10,
     },
     {
       name: 'Vincent Sica',
@@ -50,13 +52,16 @@ export default function Advisors() {
             {advisors.map((advisor, index) => (
               <div key={index} className="advisor-card">
                 {advisor.image ? (
-                  <Image
-                    src={advisor.image}
-                    alt={advisor.name}
-                    width={80}
-                    height={80}
-                    className="advisor-image"
-                  />
+                  <div className="advisor-image-wrapper">
+                    <Image
+                      src={advisor.image}
+                      alt={advisor.name}
+                      width={80}
+                      height={80}
+                      className={advisor.imageScale ? "advisor-image-inner" : "advisor-image"}
+                      style={advisor.imageScale ? { transform: `scale(${advisor.imageScale}) translateY(${advisor.imageOffsetY || 0}px)` } : undefined}
+                    />
+                  </div>
                 ) : (
                   <div
                     className="advisor-image advisor-placeholder"
