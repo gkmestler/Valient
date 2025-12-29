@@ -41,6 +41,15 @@ export default function Advisors() {
       image: '/images/edward-gorelick.jpg',
       linkedin: '',
     },
+    {
+      name: 'Evan Farber',
+      title: 'General Counsel at The Cranemere Group, Board Member of Flotek Industries',
+      image: '/images/V-Evan Farber.png',
+      linkedin: 'https://www.linkedin.com/in/evan-farber/',
+      imageScale: 1.45,
+      imageOffsetY: 6,
+      containImage: true,
+    },
   ]
 
   return (
@@ -59,7 +68,10 @@ export default function Advisors() {
                       width={80}
                       height={80}
                       className={advisor.imageScale ? "advisor-image-inner" : "advisor-image"}
-                      style={advisor.imageScale ? { transform: `scale(${advisor.imageScale}) translateY(${advisor.imageOffsetY || 0}px)` } : undefined}
+                      style={{
+                        ...(advisor.imageScale ? { transform: `scale(${advisor.imageScale}) translateY(${advisor.imageOffsetY || 0}px)` } : {}),
+                        ...(advisor.containImage ? { objectFit: 'contain' } : {}),
+                      }}
                     />
                   </div>
                 ) : (
