@@ -26,7 +26,7 @@ export default function Leadership() {
     <section className="leadership" id="team">
       <div className="container">
         <div className="leadership-content">
-          <h2>Meet Our Team</h2>
+          <h2>Our People</h2>
           <p className="leadership-subtext">We've assembled a diverse team of entrepreneurs, blending talents from various backgrounds and industries, to effectively support our portfolio companies from all angles.</p>
           <div className="team-grid">
             {teamMembers.map((member, index) => (

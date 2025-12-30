@@ -142,7 +142,7 @@ export default function Header() {
 
             <nav>
               <ul className="nav-links">
-                <li><Link href="/#team" className={getNavLinkClass('team')} onClick={() => handleNavClick('team')}>Team</Link></li>
+                <li><Link href="/#team" className={getNavLinkClass('team')} onClick={() => handleNavClick('team')}>Our People</Link></li>
                 <li><Link href="/portfolio" className={getNavLinkClass('portfolio')} onClick={() => handleNavClick('portfolio')}>Portfolio</Link></li>
                 <li><Link href="/approach" className={getNavLinkClass('approach')} onClick={() => handleNavClick('approach')}>Our Approach</Link></li>
                 <li><Link href="/sell" className={getNavLinkClass('sell')} onClick={() => handleNavClick('sell')}>Sell</Link></li>
@@ -162,7 +162,7 @@ export default function Header() {
 
       <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''} ${isDarkHeader ? 'mobile-nav-dark' : ''}`}>
         <ul className="mobile-nav-links">
-          <li><Link href="/#team" className={getNavLinkClass('team')} onClick={() => { handleNavClick('team'); setIsMobileMenuOpen(false) }}>Team</Link></li>
+          <li><Link href="/#team" className={getNavLinkClass('team')} onClick={() => { handleNavClick('team'); setIsMobileMenuOpen(false) }}>Our People</Link></li>
           <li><Link href="/portfolio" className={getNavLinkClass('portfolio')} onClick={() => { handleNavClick('portfolio'); setIsMobileMenuOpen(false) }}>Portfolio</Link></li>
           <li><Link href="/approach" className={getNavLinkClass('approach')} onClick={() => { handleNavClick('approach'); setIsMobileMenuOpen(false) }}>Our Approach</Link></li>
           <li><Link href="/sell" className={getNavLinkClass('sell')} onClick={() => { handleNavClick('sell'); setIsMobileMenuOpen(false) }}>Sell</Link></li>
