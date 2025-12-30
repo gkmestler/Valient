@@ -6,8 +6,8 @@ export default function Hero() {
       <div className="container">
         <div className="hero-content">
           <h1>
-            <span className="bold">Building for</span><br />
-            <span className="bold">the</span> <span className="italic">Long-Term</span>
+            Building for<br />
+            the <span className="italic">Long-Term</span>
           </h1>
           <p>
             Partner with the next generation of entrepreneurs committed to preserving your legacy and methodically scaling what you've built.
