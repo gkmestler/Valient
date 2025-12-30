@@ -400,7 +400,7 @@ h1, h2, h3 {
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 60px;
   margin-bottom: 20px;
   font-weight: normal;
   color: #000000;
@@ -409,13 +409,17 @@ h1, h2, h3 {
 
 @media (min-width: 768px) {
   .hero h1 {
-    font-size: 72px;
+    font-size: 110px;
   }
 }
 
 .hero h1 .italic {
   font-style: italic;
   color: #000000;
+}
+
+.hero h1 .bold {
+  font-weight: bold;
 }
 
 .hero p {
