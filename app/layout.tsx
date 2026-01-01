@@ -20,13 +20,11 @@ export const metadata: Metadata = {
     title: 'Methodic Ventures',
     description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
     type: 'website',
-    images: ['/images/METHODIC LOGO BLACK.png'],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Methodic Ventures',
     description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
-    images: ['/images/METHODIC LOGO BLACK.png'],
   },
 }
 
