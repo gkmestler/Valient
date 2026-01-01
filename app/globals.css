@@ -409,13 +409,14 @@ h1, h2, h3 {
 
 @media (min-width: 768px) {
   .hero h1 {
-    font-size: 110px;
+    font-size: 96px;
   }
 }
 
 .hero h1 .italic {
   font-style: italic;
   color: #000000;
+  white-space: nowrap;
 }
 
 .hero h1 .bold {
