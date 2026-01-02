@@ -425,12 +425,6 @@ h1, h2, h3 {
   white-space: nowrap;
 }
 
-@media (max-width: 575px) {
-  .hero h1 .italic {
-    white-space: normal;
-  }
-}
-
 .hero h1 .bold {
   font-weight: bold;
 }
