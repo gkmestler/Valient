@@ -5,7 +5,8 @@ export default function Advisors() {
   const advisors = [
     {
       name: 'Brad Johnson',
-      title: 'Professor Emeritus Babson College and Former Vice President Wayfair',
+      title: 'Professor Emeritus at Babson College and',
+      titleLine2: 'Former Vice President at Wayfair',
       image: '/images/brad-johnson.jpg',
       linkedin: 'https://www.linkedin.com/in/bradjohnson12/',
       imageScale: 1.5,
@@ -102,7 +103,10 @@ export default function Advisors() {
                       </a>
                     )}
                   </div>
-                  <div className="advisor-title">{advisor.title}</div>
+                  <div className="advisor-title">
+                    {advisor.title}
+                    {advisor.titleLine2 && <><br />{advisor.titleLine2}</>}
+                  </div>
                 </div>
               </div>
             ))}
