@@ -5,7 +5,7 @@ export default function Statistics() {
     { value: '2024', label: 'Founded' },
     { value: '$4M+', label: 'In Revenue' },
     { value: '9', label: 'Entrepreneurs' },
-    { value: '6', label: 'Strategic Advisors' },
+    { value: '7', label: 'Strategic Advisors' },
   ]
 
   return (
