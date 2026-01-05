@@ -13,34 +13,10 @@ export default function Advisors() {
       imageOffsetY: 10,
     },
     {
-      name: 'Vincent Sica',
-      title: 'Founder of Vintra Franchise Holdings',
-      image: '/images/vincent-sica.jpg',
-      linkedin: '',
-    },
-    {
       name: 'Scott Waxler',
       title: 'Founder, Lockebridge Capital Partners',
       image: '/images/scott-waxler.jpg',
       linkedin: 'https://www.linkedin.com/in/scottwaxler/',
-    },
-    {
-      name: 'Erik Noyes',
-      title: 'Professor of Entrepreneurship at Babson College',
-      image: '/images/erik-noyes.jpg',
-      linkedin: 'https://www.linkedin.com/in/erik-noyes-40b1b73/',
-    },
-    {
-      name: 'Chad Mestler',
-      title: 'Founder of Helvetica Group and Raiseli.com',
-      image: '/images/chad-mestler.jpg',
-      linkedin: 'https://www.linkedin.com/in/chadmestler/',
-    },
-    {
-      name: 'Edward Gorelick',
-      title: 'Founder of Gorelick & Uslaner, CPAs',
-      image: '/images/edward-gorelick.jpg',
-      linkedin: '',
     },
     {
       name: 'Evan Farber',
@@ -50,6 +26,30 @@ export default function Advisors() {
       imageScale: 1.45,
       imageOffsetY: 6,
       containImage: true,
+    },
+    {
+      name: 'Erik Noyes',
+      title: 'Professor of Entrepreneurship at Babson College',
+      image: '/images/erik-noyes.jpg',
+      linkedin: 'https://www.linkedin.com/in/erik-noyes-40b1b73/',
+    },
+    {
+      name: 'Edward Gorelick',
+      title: 'Founder of Gorelick & Uslaner, CPAs',
+      image: '/images/edward-gorelick.jpg',
+      linkedin: '',
+    },
+    {
+      name: 'Chad Mestler',
+      title: 'Founder of Helvetica Group and Raiseli.com',
+      image: '/images/chad-mestler.jpg',
+      linkedin: 'https://www.linkedin.com/in/chadmestler/',
+    },
+    {
+      name: 'Vincent Sica',
+      title: 'Founder of Vintra Franchise Holdings',
+      image: '/images/vincent-sica.jpg',
+      linkedin: '',
     },
   ]
 
