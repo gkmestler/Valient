@@ -11,6 +11,10 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://methodicventures.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: 'Methodic Ventures',
   description: 'Sell your business to the next generation of entrepreneurs dedicated to preserving your legacy and scaling what you have built.',
   icons: {
