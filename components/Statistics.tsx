@@ -3,7 +3,7 @@ import React from 'react'
 export default function Statistics() {
   const stats = [
     { value: '2024', label: 'Founded' },
-    { value: '$4M+', label: 'In Revenue' },
+    { value: '$5M+', label: 'In Revenue' },
     { value: '9', label: 'Entrepreneurs' },
     { value: '7', label: 'Strategic Advisors' },
   ]
