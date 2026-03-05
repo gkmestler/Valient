@@ -28,6 +28,17 @@ export default function Leadership() {
         <div className="leadership-content">
           <h2>Our People</h2>
           <p className="leadership-subtext">We've assembled a diverse team of entrepreneurs, blending talents from various backgrounds and industries, to effectively support our portfolio companies from all angles.</p>
+          <div className="founders-photo">
+            <Image
+              src="/images/Methodic Team Photo.jpg"
+              alt="Methodic Ventures Founders — Gavin Mestler, Logan Mestler, and Dean Farber"
+              width={900}
+              height={500}
+              className="founders-image"
+              priority
+            />
+            <p className="founders-caption">Logan Mestler, Gavin Mestler & Dean Farber — Co-Founders</p>
+          </div>
           <div className="team-grid">
             {teamMembers.map((member, index) => (
               <div key={index} className={`team-card ${expandedIndex === index ? 'expanded' : ''}`} onClick={() => handleToggle(index)}>

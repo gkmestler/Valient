@@ -618,6 +618,29 @@ h1, h2, h3 {
   }
 }
 
+.founders-photo {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.founders-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  border: 2px solid #000000;
+}
+
+.founders-caption {
+  font-size: 15px;
+  color: #000000;
+  opacity: 0.7;
+  margin-top: 14px;
+  font-style: italic;
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: 1fr;
