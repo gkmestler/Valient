@@ -1338,10 +1338,14 @@ a.portfolio-card {
 
 .portfolio-card.logo-takkra .portfolio-logo,
 .portfolio-card.logo-sneakersoul .portfolio-logo,
-.portfolio-card.logo-junkuniversity .portfolio-logo,
-.portfolio-card.logo-truvit .portfolio-logo {
+.portfolio-card.logo-junkuniversity .portfolio-logo {
   max-width: 85%;
   max-height: 85%;
+}
+
+.portfolio-card.logo-tuition .portfolio-logo {
+  max-width: 105%;
+  max-height: 105%;
 }
 
 .portfolio-card.logo-luduspursuit .portfolio-logo {

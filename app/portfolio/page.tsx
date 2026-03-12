@@ -44,10 +44,10 @@ const portfolioCompanies = [
     url: 'https://takkra.es/',
   },
   {
-    name: 'Truvit',
-    logo: '/images/portfolio/truvit_logo.png',
-    className: 'logo-truvit',
-    url: 'https://www.linkedin.com/company/truvit/',
+    name: 'Tuition',
+    logo: '/images/portfolio/Tuition Text Logo.png',
+    className: 'logo-tuition',
+    url: '',
   },
   {
     name: 'Fluidify Systems',
