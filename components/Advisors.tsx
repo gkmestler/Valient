@@ -5,6 +5,7 @@ export default function Advisors() {
   const advisors = [
     {
       name: 'Brad Johnson',
+      role: 'Operations',
       title: 'Professor Emeritus at Babson College and',
       titleLine2: 'Former Vice President at Wayfair',
       image: '/images/brad-johnson.jpg',
@@ -14,12 +15,14 @@ export default function Advisors() {
     },
     {
       name: 'Scott Waxler',
+      role: 'M&A',
       title: 'Founder, Lockebridge Capital Partners',
       image: '/images/scott-waxler.jpg',
       linkedin: 'https://www.linkedin.com/in/scottwaxler/',
     },
     {
       name: 'Evan Farber',
+      role: 'Legal',
       title: 'General Counsel at The Cranemere Group, Board Member of Flotek Industries',
       image: '/images/V-Evan Farber.png',
       linkedin: 'https://www.linkedin.com/in/evan-farber/',
@@ -28,19 +31,31 @@ export default function Advisors() {
       containImage: true,
     },
     {
+      name: 'Matt Walker',
+      role: 'Acquisitions',
+      title: 'Investor, Operator, and Entrepreneur Specializing in Business Acquisitions and Real Estate',
+      image: '/images/matt-walker.png',
+      linkedin: 'https://www.linkedin.com/in/mattwalker15/',
+      imageScale: 1.25,
+      imageOffsetY: 6,
+    },
+    {
       name: 'Erik Noyes',
-      title: 'Professor of Entrepreneurship at Babson College',
+      role: 'Strategy',
+      title: 'Director of The Generator AI Lab and Professor of Entrepreuership at Babson College',
       image: '/images/erik-noyes.jpg',
       linkedin: 'https://www.linkedin.com/in/erik-noyes-40b1b73/',
     },
     {
       name: 'Edward Gorelick',
+      role: 'Accounting',
       title: 'Founder of Gorelick & Uslaner, CPAs',
       image: '/images/edward-gorelick.jpg',
       linkedin: '',
     },
     {
       name: 'Chad Mestler',
+      role: 'Capital Markets',
       title: 'Founder of Helvetica Group and Raiseli.com',
       image: '/images/chad-mestler.jpg',
       linkedin: 'https://www.linkedin.com/in/chadmestler/',
@@ -103,6 +118,7 @@ export default function Advisors() {
                       </a>
                     )}
                   </div>
+                  {advisor.role && <div className="advisor-role">{advisor.role}</div>}
                   <div className="advisor-title">
                     {advisor.title}
                     {advisor.titleLine2 && <><br />{advisor.titleLine2}</>}
